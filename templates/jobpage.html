@@ -1,0 +1,54 @@
+<! DOCTYPE html>
+
+<html>
+
+  
+  <head>
+    
+    <title>
+      {{job.title}} - Job Hunt
+    </title>   
+
+    {% include 'bootstrap.html' %}
+    
+  </head>
+
+  <body>
+
+    {% include 'nav.html' %}
+
+    <h1 class= "text-center mt-4 mb-4">Job Hunt</h1>
+
+    {% include 'banner.html' %}
+
+    <div class="container">
+
+
+      <h2><b>{{job.title}}</b></h2>
+  
+      <p class="lead">{{job.location}}</p>
+  
+      <h3>Responsibility</h3>
+      <ul>
+        {% for res in job.responsibilities.split("\n") %}
+          <li>{{res}}</li>
+        {% endfor %}
+      </ul>
+  
+      <h3>Requirements</h3>
+      <ol>
+        {% for req in job.requirements.split("\n") %}
+          <li>{{req}}</li>
+        {% endfor %}
+      </ol>
+
+      <h3>Salary</h3>
+      <p>{{job.currrency}}{{job.salary}}</p>
+
+    </div>
+
+
+    {% include 'footer.html' %}
+    
+  </body>
+</html>
