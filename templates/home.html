@@ -29,20 +29,37 @@
   
   <body>
 
+    {% include 'nav.html' %}
+    
+    <h1 class= "text-center mt-4 mb-4">Job Hunt</h1>
+    
+    <img class="img-fluid" id="banner" src="https://www.timesjobs.com/timesjobs/dme/images/banner.jpg"> 
+
     <div class="container">
 
-      <h1 class= "text-center mt-4 mb-4">Job Hunt</h1>
   
-      <img class="img-fluid" id="banner" src="https://www.timesjobs.com/timesjobs/dme/images/banner.jpg"> 
   
       <h2 class= "text-center mt-4 mb-2">About Job Hunt</h2>
-      <p class= "lead">Our job hunt website is dedicated to connecting job seekers with their dream careers. We understand that job hunting can be a daunting task, and that's why we've made it our mission to simplify the process for you.
-  
-  Our team of experts is committed to providing you with the best tools and resources to help you find the right job. Whether you're just starting out or looking for a career change, we have the expertise to guide you every step of the way.
-  
-  With our user-friendly interface, you can easily search and apply for jobs that match your skills and interests. We also offer personalized job alerts to ensure that you never miss out on a great opportunity.
-  
-  At our job hunt website, we are passionate about helping you achieve your career goals. Join us today and take the first step towards a brighter future.</p>
+
+      <div class="row" style= "margin-bottom:16px;"> 
+        <div class="col-md-8">
+          <p class= "lead">Our job hunt website is dedicated to connecting job seekers with their dream careers. We understand that job hunting can be a daunting task, and that's why we've made it our mission to simplify the process for you.
+      
+      Our team of experts is committed to providing you with the best tools and resources to help you find the right job. Whether you're just starting out or looking for a career change, we have the expertise to guide you every step of the way.
+      
+      With our user-friendly interface, you can easily search and apply for jobs that match your skills and interests. We also offer personalized job alerts to ensure that you never miss out on a great opportunity.
+      
+      At our job hunt website, we are passionate about helping you achieve your career goals. Join us today and take the first step towards a brighter future.
+          </p>
+        </div>
+
+        <div class="d-none d-md-block col-md-4">
+
+          <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style= "height:320px; border-radius: 5px;">
+
+        </div>
+
+      </div>
   
       <h2 class= "text-center">Available Jobs</h2>
       <div>
@@ -51,10 +68,15 @@
         {% endfor %}
       </div>
 
-      <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-    
-        <p class="mt-4">Copyright 2023, @pralam</p>
+
+      <div class= "text-center">
+        <a href="mailto:pralam.website@gmail.com?subject=Questions%20about%20Job%20openings&body=Name%3A%20%3Cyour%20name%3E%0D%0AMy%20Question%3A%20%3Center%20your%20question%20here%3E" class="btn btn-primary btn-lg">Contact Us</a>
+      </div>
+
+
+      <!-- Footer -->
+      <div>
+        {% include 'footer.html' %}
       </div>
 
     </div>

@@ -25,8 +25,13 @@ JOBS = [{
 
 
 @app.route("/")
-def web():
+def main():
   return render_template('home.html', jobs=JOBS)
+
+
+@app.route("/not_ready")
+def not_ready_page():
+  return render_template('not_ready.html')
 
 
 if __name__ == '__main__':
